@@ -1,0 +1,42 @@
+Here is a simple self-introduction for a Software Developer fresher 
+that you can use in interviews:
+
+Self Introduction:
+
+"Good morning/afternoon, sir/madam.
+
+My name is Kapil. I have completed my Master of Computer Applications (MCA) 
+from Pune University and my Bachelor of Science (B.Sc.) from Nanded University.
+
+I have a strong interest in software development and programming. My primary programming
+ language is Python, and I am familiar with technologies such as Flask, FastAPI, SQL,
+  and Git. I have also learned basic concepts of Data Structures, Object-Oriented Programming,
+   APIs, and Machine Learning using Scikit-learn.
+
+As a fresher, I have worked on personal projects such as an ATM Management System, Number
+ Guessing Game, QR Code Generator, and web applications using Flask. These projects helped
+  me improve my problem-solving skills and understanding of software development.
+
+I am a quick learner, hardworking, and eager to contribute to a professional development
+ team. I am looking for an opportunity where I can apply my technical skills, learn from 
+ experienced professionals, and grow as a Software Developer.
+
+Thank you."
+
+Short Version (30 seconds)
+
+"Hello, my name is Kapil. I have completed my MCA from Pune University and B.Sc.
+ from Nanded University. 
+I am passionate about software development and have skills in Python, Flask,
+ FastAPI, SQL, and basic Machine Learning. 
+I have built several personal projects to strengthen my programming skills.
+ As a fresher, I am eager to learn, 
+contribute to real-world projects, and grow my career as a Software Developer."
+
+
+
+Important Tips
+Speak confidently and clearly.
+Mention 2–3 projects from your resume.
+Focus on your skills and willingness to learn.
+Keep the introduction between 1–2 minutes in interviews.
