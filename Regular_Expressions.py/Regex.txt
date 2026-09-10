@@ -1,0 +1,266 @@
+Regular Expressions (Regex) in Python
+
+A Regular Expression (Regex) is a sequence of characters used to search, match, and manipulate text patterns.
+
+Python provides regex support through the built-in re module.
+
+import re
+Why use Regex?
+Common uses:
+
+Validate email addresses
+
+Search words in text
+
+Extract numbers
+
+Replace text patterns
+
+Validate phone numbers
+
+Find URLs, dates, etc.
+
+Basic Regex Functions
+1. re.match()
+Checks if the pattern exists at the beginning of a string.
+
+import re
+
+text = "Python is easy"
+
+result = re.match("Python", text)
+
+print(result)
+Output:
+
+<re.Match object>
+Example:
+
+result = re.match("Java", text)
+
+print(result)
+Output:
+
+None
+2. re.search()
+Searches the entire string.
+
+import re
+
+text = "I love Python programming"
+
+result = re.search("Python", text)
+
+print(result)
+Output:
+
+<re.Match object>
+3. re.findall()
+Returns all matching values as a list.
+
+import re
+
+text = "My numbers are 123 and 456"
+
+result = re.findall("\d+", text)
+
+print(result)
+Output:
+
+['123', '456']
+4. re.sub()
+Replaces matched text.
+
+import re
+
+text = "Python is good"
+
+result = re.sub("good", "awesome", text)
+
+print(result)
+Output:
+
+Python is awesome
+5. re.split()
+Splits string based on pattern.
+
+import re
+
+text = "Python,Java,C++"
+
+result = re.split(",", text)
+
+print(result)
+Output:
+
+['Python', 'Java', 'C++']
+Regex Special Characters
+1. Dot .
+Matches any character.
+
+import re
+
+text = "cat cot cut"
+
+print(re.findall("c.t", text))
+Output:
+
+['cat', 'cot', 'cut']
+2. ^ Start of string
+import re
+
+text = "Python"
+
+print(re.search("^Py", text))
+Matches:
+
+Py
+3. $ End of string
+import re
+
+text = "Python"
+
+print(re.search("on$", text))
+Matches:
+
+on
+Character Classes
+[] Match characters
+import re
+
+text = "cat bat rat"
+
+print(re.findall("[cbr]at", text))
+Output:
+
+['cat', 'bat', 'rat']
+Quantifiers
+* Zero or more
+import re
+
+print(re.findall("ab*", "a ab abb"))
+Output:
+
+['a', 'ab', 'abb']
++ One or more
+print(re.findall("ab+", "a ab abb"))
+Output:
+
+['ab', 'abb']
+? Zero or one
+print(re.findall("colou?r", "color colour"))
+Output:
+
+['color', 'colour']
+{n} Exact number
+import re
+
+text = "123 4567"
+
+print(re.findall("\d{3}", text))
+Output:
+
+['123', '456']
+Important Shortcuts
+Pattern	Meaning	Example
+\d	Digit	0-9
+\D	Not digit	abc
+\w	Word character	a-z, A-Z, 0-9, _
+\W	Not word	
+\s	Space	
+\S	Not space	
+Email Validation Example
+import re
+
+email = "user@gmail.com"
+
+pattern = r"^[a-zA-Z0-9]+@[a-zA-Z]+\.[a-zA-Z]+$"
+
+if re.match(pattern, email):
+    print("Valid email")
+else:
+    print("Invalid email")
+Output:
+
+Valid email
+Phone Number Validation
+import re
+
+phone = "9876543210"
+
+pattern = r"^[0-9]{10}$"
+
+if re.match(pattern, phone):
+    print("Valid number")
+else:
+    print("Invalid number")
+Output:
+
+Valid number
+Groups ()
+Used to capture parts of text.
+
+import re
+
+text = "My DOB is 30-06-2026"
+
+result = re.search(r"(\d+)-(\d+)-(\d+)", text)
+
+print(result.group(1))
+print(result.group(2))
+print(result.group(3))
+Output:
+
+30
+06
+2026
+Raw String r""
+Regex uses backslashes, so Python raw strings are preferred.
+
+Without raw string:
+
+"\d"
+With raw string:
+
+r"\d"
+Example:
+
+import re
+
+text = "Age 25"
+
+print(re.findall(r"\d+", text))
+Output:
+
+['25']
+Real-Time Uses
+Django form validation
+username validation
+email validation
+password rules
+Data extraction
+Extract phone numbers from documents
+Web scraping
+Find links, prices, dates
+Log analysis
+Find errors from server logs
+Summary
+Regex is used for pattern matching.
+
+Python uses the re module.
+
+Main functions:
+
+match() → beginning
+
+search() → anywhere
+
+findall() → all matches
+
+sub() → replace
+
+split() → split text
+
+Regex is widely used in validation, scraping, and data processing.
+
+
